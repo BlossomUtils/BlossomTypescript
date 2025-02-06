@@ -18,9 +18,11 @@ declare module "@minecraft/server" {
 (Player.prototype as any).error = function (message: string) {
     this.sendMessage(`§c§lERROR §8>> §r§7${message}`);
 };
-
-(World.prototype as any).moduleError = function (message: string) {
-    this.sendMessage(`§cMODULE ERROR §8>> §r§7${message}`);
+(Player.prototype as any).success = function (message: string) {
+    this.sendMessage(`§l§aSUCCESS §8>> §r§7${message}`);
+};
+(Player.prototype as any).info = function (message: string) {
+    this.sendMessage(`§l§bINFO §8>> §r§7${message}`);
 };
 
 system.afterEvents.scriptEventReceive.subscribe((e) => {
