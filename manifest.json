@@ -1,0 +1,56 @@
+{
+    "format_version": 2,
+    "metadata": {
+      "authors": [
+        "ManifestCreator"
+      ]
+    },
+    "header": {
+      "name": "§d§lBlossom Essentials §bTypeScript - §d0.1.0",
+      "description": "§bBlossom Essentials but using TypeScript!\n§7[§c!§7]§r§c May replace Blossom Essentials one day!",
+      "min_engine_version": [
+        1,
+        20,
+        60
+      ],
+      "uuid": "23182fbf-de54-45e8-b94f-8e5b940b8258",
+      "version": [
+        0,
+        1,
+        0
+      ]
+    },
+    "modules": [
+      {
+        "type": "data",
+        "uuid": "06965403-e224-48da-924c-f34cd70e24a1",
+        "version": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "type": "script",
+        "language": "javascript",
+        "uuid": "62029b32-4da8-44c8-9337-bbd5992dcc41",
+        "entry": "scripts/main.js",
+        "version": [
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "module_name": "@minecraft/server",
+        "version": "1.17.0-beta"
+      },
+      {
+        "module_name": "@minecraft/server-ui",
+        "version": "1.4.0-beta"
+      }
+    ]
+  }
+  

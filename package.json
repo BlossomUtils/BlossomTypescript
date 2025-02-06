@@ -1,0 +1,15 @@
+{
+  "name": "blossomtypescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@minecraft/server": "^2.0.0-beta.1.21.70-preview.22",
+    "@minecraft/server-ui": "^2.0.0-beta.1.21.70-preview.22"
+  }
+}
