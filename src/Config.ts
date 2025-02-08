@@ -8,7 +8,13 @@ let config = {
     uiNames: {
         Config: {
             Root: 'config_root | Config/Root',
-            Credits: 'config_credits | Config/Credits'
+            Credits: 'config_credits | Config/Credits',
+            Main: 'config_main | Config/Main'
+        },
+        Ranks: {
+            View: 'rank_view | Rank/View',
+            Add: 'rank_add | Rank/Add',
+            Root: "ranks | Ranks"
         }
     }
 }

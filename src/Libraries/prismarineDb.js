@@ -2863,12 +2863,14 @@ var __typeError = (msg) => {
     NonPersistentStorage,
     ScoreboardPersistentStorage,
     WorldPersistentStorage,
+    PrismarineDBTable,
     colors,
     filterVec3,
     functionStore,
     isVec3,
     playerAPI,
     positionalDb,
-    prismarineDb
+    prismarineDb,
+    KeyValTemplate
   };
   
