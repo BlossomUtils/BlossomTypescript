@@ -19,7 +19,7 @@ class Ranks {
     }
     getFromPlayer(player: Player) {
         let rs = [];
-        for(const rank of this.db.findDocuments()) {
+        for(const rank of this.db.findDocuments({})) {
             for(const tag of player.getTags()) {
                 if(rank.data.tag == tag) {
                     rs.push(rank.data.name)
@@ -29,7 +29,7 @@ class Ranks {
         return rs;
     }
     getAll() {
-        let docs = this.db.findDocuments();
+        let docs = this.db.findDocuments({});
         if(!docs) return [];
         return docs;
     }

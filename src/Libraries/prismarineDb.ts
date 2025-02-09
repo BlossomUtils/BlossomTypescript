@@ -1,3 +1,4 @@
+// @ts-nocheck
 var __typeError = (msg) => {
     throw TypeError(msg);
   };
@@ -14,7 +15,6 @@ var __typeError = (msg) => {
       return __privateGet(obj, member, getter);
     }
   });
-  
   // scripts/pdb/underscore.js
   var VERSION = "1.13.6";
   var root = typeof self == "object" && self.self === self && self || typeof global == "object" && global.global === global && global || Function("return this")() || {};

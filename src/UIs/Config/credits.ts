@@ -9,7 +9,7 @@ uiManager.addUI(config.uiNames.Config.Credits, 'config credits', (player)=>{
         uiManager.open(player, config.uiNames.Config.Root)
     })
     for(const c of config.details.credits) {
-        form.button(`§b${c.name}\n§7${c.description}`, c.icon ? c.icon : 'icons/icon')
+        form.button(`§b${c.name}\n§7${c.description}`, c.icon ? c.icon : 'icons/icon', (player)=>{})
     }
-    form.show(player)
+    form.show(player, {})
 })

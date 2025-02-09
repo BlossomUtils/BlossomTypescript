@@ -6,7 +6,7 @@ import './Commands/index'
 import Modules from "Modules/Modules";
 import { ranks } from "Modules/Ranks";
 import BlossomFormatter from "Modules/BlossomFormatter";
-import commandManager from "Libraries/commandManager";
+// import commandManager from "Libraries/commandManager";
 
 world.sendMessage('§dBlossom §bTypescript §7- §dLoaded!')
 
@@ -18,7 +18,7 @@ declare module "@minecraft/server" {
     }
 
     interface World {
-        moduleError(message: string): void;
+        criticalError(message: string): void;
     }
 }
 
@@ -30,6 +30,9 @@ declare module "@minecraft/server" {
 };
 (Player.prototype as any).info = function (message: string) {
     this.sendMessage(`§l§bINFO §8>> §r§7${message}`);
+};
+(World.prototype as any).criticalError = function (message: string) {
+    this.sendMessage(`§l§4CRITICAL ERROR §8>> §r§7${message}`);
 };
 
 system.afterEvents.scriptEventReceive.subscribe((e) => {
@@ -44,11 +47,12 @@ world.afterEvents.itemUse.subscribe((e) => {
 })
 
 world.beforeEvents.chatSend.subscribe((msg) => {
-    if(msg.message.startsWith(commandManager.prefix)) {
-        commandManager.run(msg)
-        msg.cancel = true;
-        return;
-    }
+    // if(msg.message.startsWith(commandManager.prefix)) {
+        // commandManager.run(msg)
+        // msg.cancel = true;
+        // return;
+    // }
+    // @ts-ignore
     if(!Modules.get('ranks')) return;
 
     msg.cancel = true;
@@ -64,7 +68,7 @@ world.beforeEvents.chatSend.subscribe((msg) => {
     let newmsg = BlossomFormatter.format(msg.message, msg.sender)
     let nc;
     let cc;
-    let docs = ranks.db.findDocuments();
+    let docs = ranks.db.findDocuments({});
     for (const doc of docs) {
         let tags = msg.sender.getTags();
         for (const tag of tags) {

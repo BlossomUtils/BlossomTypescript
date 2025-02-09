@@ -1,7 +1,7 @@
-import commandManager from "Libraries/commandManager";
+// import commandManager from "Libraries/commandManager";
 import { prismarineDb } from "Libraries/prismarineDb";
 import config from "Config";
-
+/**
 commandManager.addCommand("help", {description: `Get help with ${config.details.name}`, category: "Help"}, ({msg,args})=>{
     let commands = commandManager.cmds.findDocuments(null);
     let commandData = {};
@@ -37,3 +37,4 @@ commandManager.addSubcommand("help", "version", {description: `Get help setting 
     text.push(`§eVersion: §fV${prismarineDb.version.toFixed(1)}`)
     msg.sender.sendMessage(text.join('\n§r'))
 })
+*/

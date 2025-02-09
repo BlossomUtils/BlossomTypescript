@@ -31,4 +31,9 @@ class UIBuilder {
         this.db.overwriteDataByID(id, ui.data)
         return true;
     }
+    removeUI(id: number) {
+        let ui = this.db.getByID(id)
+        if(!ui) throw new Error('No UI found.');
+        return this.db.deleteDocumentByID(id)
+    }
 }

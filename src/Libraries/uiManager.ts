@@ -42,8 +42,8 @@ class UIManager {
             let form = new ActionForm();
             form.title("§cError")
             form.body(`§cError opening UI: UI does not exist (Callback: ${name})`)
-            form.button("Exit", null)
-            form.show(player)
+            form.button("Exit", null, (player)=>{})
+            form.show(player, {})
             return;
         }
         player.runCommandAsync(`scriptevent blossom:uiOpened A UI was opened by ${player.name} with ID ${name}`)
@@ -54,8 +54,8 @@ class UIManager {
                 let form = new ActionForm();
                 form.title("§cError")
                 form.body(`§cError opening UI ${name}: ${e}\n${e.stack}`)
-                form.button("Exit", null)
-                form.show(player)
+                form.button("Exit", null, (player)=>{})
+                form.show(player, {})
             }
         } else if (type == "ALT") {
             try {
@@ -64,8 +64,8 @@ class UIManager {
                 let form = new ActionForm();
                 form.title("§cError")
                 form.body(`§cError opening UI: ${e}\n${e.stack}`)
-                form.button("Exit", null)
-                form.show(player)
+                form.button("Exit", null, (player)=>{})
+                form.show(player, {})
             }
         }
     }

@@ -9,7 +9,8 @@ let config = {
         Config: {
             Root: 'config_root | Config/Root',
             Credits: 'config_credits | Config/Credits',
-            Main: 'config_main | Config/Main'
+            Main: 'config_main | Config/Main',
+            Modules: 'config_modules | Config/Modules'
         },
         Ranks: {
             View: 'rank_view | Rank/View',

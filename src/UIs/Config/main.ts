@@ -12,5 +12,5 @@ uiManager.addUI(config.uiNames.Config.Main, 'config main', (player: Player) => {
     form.button(`§dRanks\n§7Make custom chat ranks`, 'textures/blossom_icons/rank', (player: Player) => {
         uiManager.open(player, config.uiNames.Ranks.Root)
     })
-    form.show(player)
+    form.show(player, {})
 })

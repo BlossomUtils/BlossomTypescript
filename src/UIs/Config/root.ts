@@ -11,5 +11,5 @@ uiManager.addUI(config.uiNames.Config.Root, 'Config Root', (player)=>{
     form.button(`§bCredits\n§7Credits for the addon`, 'textures/blossom_icons/credits', (player) => {
         uiManager.open(player, config.uiNames.Config.Credits)
     })
-    form.show(player)
+    form.show(player, {})
 })

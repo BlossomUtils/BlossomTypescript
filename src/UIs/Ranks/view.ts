@@ -23,12 +23,12 @@ uiManager.addUI(config.uiNames.Ranks.View, 'Ranks View', (player: Player, tag: s
             let nc = colors.getColorCodes()[nci as number]
             let cc = colors.getColorCodes()[cci as number]
             ranks.edit(rank.id, display as string, tag as string, nc, cc)
-            form.show(player)
+            form.show(player, {})
         })
     })
     form.button(`§cDelete\n§7Delete this rank`, `textures/blossom_icons/delrank`, (player: Player) => {
         ranks.remove(rank.data.tag)
         uiManager.open(player, config.uiNames.Ranks.Root)
     })
-    form.show(player)
+    form.show(player, {})
 })

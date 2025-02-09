@@ -16,5 +16,5 @@ uiManager.addUI(config.uiNames.Ranks.Root, 'ranks root', (player: Player) => {
             uiManager.open(player, config.uiNames.Ranks.View, r.data.tag)
         })
     }
-    form.show(player)
+    form.show(player, {})
 })
