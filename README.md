@@ -10,6 +10,4 @@ Blossom Essentials is a great addon, but has flaws with features made before V0.
 
 This addon will aim to fix like all of that
 
-Also its made in typescript because yes
-
-Also it uses my own db this time so there is nothing used from other addons :3
+Also its made in typescript because why not
